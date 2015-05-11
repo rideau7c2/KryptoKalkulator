@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="ovh.rideau.cryptocalc.FastModExpActivity"
+    android:textAlignment="textEnd">
+
+    <TextView android:text="@string/fastModExpText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2" />
+
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/aVal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp"
+        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:focusable="true"
+        android:inputType="number"
+        android:numeric="integer"
+        android:text="2"
+        android:phoneNumber="true"
+        android:textStyle="bold"
+        android:paddingRight="0dp"
+        android:editable="true"
+        android:enabled="true" />
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/powerExponent"
+        style="@style/Base.TextAppearance.AppCompat.Small"
+        android:focusable="true"
+        android:inputType="number"
+        android:numeric="integer"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_toRightOf="@+id/aVal"
+        android:layout_toEndOf="@+id/aVal"
+        android:layout_marginTop="25dp"
+        android:text="10"
+        android:textStyle="bold"
+        android:enabled="true"
+        android:editable="true" />
+    <EditText
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/modul"
+        style="@style/Base.TextAppearance.AppCompat.Large"
+        android:focusable="true"
+        android:inputType="number"
+        android:numeric="integer"
+        android:layout_alignBottom="@+id/modText"
+        android:layout_toRightOf="@+id/modText"
+        android:layout_toEndOf="@+id/modText"
+        android:text="10"
+        android:textStyle="bold"
+        android:enabled="true"
+        android:editable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="mod"
+        android:id="@+id/modText"
+        android:layout_alignBottom="@+id/aVal"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2"
+        android:textStyle="bold" />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Policz"
+        android:id="@+id/calculateFastButton"
+        android:layout_below="@+id/aVal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onClickCalculateFastButton"/>
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/calculateFastButton"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:baselineAligned="true"
+        android:id="@+id/resultTable"
+        android:orientation="vertical"
+        android:stretchColumns="1,2">
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="i"
+                android:id="@+id/iTitle"
+                android:layout_column="0"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:height="20dp"
+                android:width="40dp"
+                android:gravity="center"
+                android:background="@drawable/cell_shape"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Xi"
+                android:id="@+id/xiTitle"
+                android:layout_column="1"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:height="20dp"
+                android:gravity="center"
+                android:background="@drawable/cell_shape"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ai"
+                android:id="@+id/aiText"
+                android:layout_column="2"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:height="20dp"
+                android:gravity="center"
+                android:background="@drawable/cell_shape"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ti"
+                android:id="@+id/tiText"
+                android:layout_column="3"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:height="20dp"
+                android:width="40dp"
+                android:gravity="center"
+                android:background="@drawable/cell_shape"/>
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

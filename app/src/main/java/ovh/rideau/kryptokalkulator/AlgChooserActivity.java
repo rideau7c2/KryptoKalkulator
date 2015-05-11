@@ -1,9 +1,12 @@
 package ovh.rideau.kryptokalkulator;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 
 public class AlgChooserActivity extends ActionBarActivity {
@@ -30,10 +33,18 @@ public class AlgChooserActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        //if (id == R.id.action_settings) {return true;}
 
         return super.onOptionsItemSelected(item);
+    }
+    public void onClickFastModExpButton(View v){
+        Intent intent = new Intent(this,FastModExpActivity.class);
+        startActivity(intent);
+        Toast.makeText(this, "Wprowadz dane i wciśnij /'Policz/'", Toast.LENGTH_LONG).show();
+    }
+    public void onClickSimpleEuklidesButton(View v2){
+        Intent intent = new Intent(this,SimpleEuklidesActivity.class);
+        startActivity(intent);
+        Toast.makeText(this, "Wprowadz dane i wciśnij /'Policz/'", Toast.LENGTH_LONG).show();
     }
 }
