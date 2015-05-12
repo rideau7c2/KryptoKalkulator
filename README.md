@@ -6,9 +6,10 @@ Zadaniem aplikacji jest rysowanie tabel używanych podczas stosowania poniższyc
 * Rozszerzony Algorytm Euklidesa (odwrotność multiplikatywna)
 
 ###TODO:
-* Dokończyć algorytm Euklidesa
 * Napisać rozszerzony algorytm Euklidesa
-* ogarnąć Travis CI
+* [DONE]<del>Oznaczyc wyniki w tabelkach</del>
+* [DONE}<del>Dokończyć algorytm Euklidesa</del>
+* [DONE]<del>ogarnąć Travis CI</del>
 
 ###TOREAD:
 * [Markdown tutorial](http://tutorials24.pl/tutorial/jak-stylizowac-tutoriale-w-systemie-markdown)
