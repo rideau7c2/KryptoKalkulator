@@ -26,7 +26,7 @@
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="@string/simpleEuklText"
+        android:text="@string/simpleEuklidesText"
         android:id="@+id/simpleEuklButton"
         android:layout_below="@+id/fastModExpButton"
         android:layout_centerHorizontal="true"

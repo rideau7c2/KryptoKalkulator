@@ -6,8 +6,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="ovh.rideau.cryptocalc.FastModExpActivity"
-    android:textAlignment="textEnd">
+    tools:context="ovh.rideau.cryptocalc.FastModExpActivity">
 
     <TextView android:text="@string/fastModExpText"
         android:layout_width="wrap_content"
@@ -25,12 +24,7 @@
         style="@style/Base.TextAppearance.AppCompat.Large"
         android:focusable="true"
         android:inputType="number"
-        android:numeric="integer"
-        android:text="2"
-        android:phoneNumber="true"
         android:textStyle="bold"
-        android:paddingRight="0dp"
-        android:editable="true"
         android:enabled="true" />
     <EditText
         android:layout_width="100dp"
@@ -39,15 +33,12 @@
         style="@style/Base.TextAppearance.AppCompat.Small"
         android:focusable="true"
         android:inputType="number"
-        android:numeric="integer"
         android:layout_alignTop="@+id/textView2"
         android:layout_toRightOf="@+id/aVal"
         android:layout_toEndOf="@+id/aVal"
         android:layout_marginTop="25dp"
-        android:text="10"
         android:textStyle="bold"
-        android:enabled="true"
-        android:editable="true" />
+        android:enabled="true"/>
     <EditText
         android:layout_width="100dp"
         android:layout_height="wrap_content"
@@ -55,14 +46,11 @@
         style="@style/Base.TextAppearance.AppCompat.Large"
         android:focusable="true"
         android:inputType="number"
-        android:numeric="integer"
         android:layout_alignBottom="@+id/modText"
         android:layout_toRightOf="@+id/modText"
         android:layout_toEndOf="@+id/modText"
-        android:text="10"
         android:textStyle="bold"
-        android:enabled="true"
-        android:editable="true" />
+        android:enabled="true"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -73,12 +61,13 @@
         android:layout_alignBottom="@+id/aVal"
         android:layout_toRightOf="@+id/textView2"
         android:layout_toEndOf="@+id/textView2"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
 
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Policz"
+        android:text="@string/policz"
         android:id="@+id/calculateFastButton"
         android:layout_below="@+id/aVal"
         android:layout_alignParentLeft="true"
@@ -98,12 +87,13 @@
 
         <TableRow
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent">
+            android:layout_height="fill_parent"
+            tools:ignore="UselessParent">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="i"
+                android:text="@string/i"
                 android:id="@+id/iTitle"
                 android:layout_column="0"
                 android:paddingLeft="10dp"
@@ -116,7 +106,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Xi"
+                android:text="@string/xi"
                 android:id="@+id/xiTitle"
                 android:layout_column="1"
                 android:paddingLeft="10dp"
@@ -128,7 +118,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ai"
+                android:text="@string/ai"
                 android:id="@+id/aiText"
                 android:layout_column="2"
                 android:paddingLeft="10dp"
@@ -140,7 +130,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ti"
+                android:text="@string/ti"
                 android:id="@+id/tiText"
                 android:layout_column="3"
                 android:paddingLeft="10dp"

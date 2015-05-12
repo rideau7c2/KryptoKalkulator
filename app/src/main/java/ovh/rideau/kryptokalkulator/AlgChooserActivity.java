@@ -1,15 +1,15 @@
 package ovh.rideau.kryptokalkulator;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
 
-public class AlgChooserActivity extends ActionBarActivity {
+public class AlgChooserActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,19 +30,27 @@ public class AlgChooserActivity extends ActionBarActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        //if (id == R.id.action_settings) {return true;}
-
-        return super.onOptionsItemSelected(item);
+        switch(item.getItemId()){
+            case R.id.action_simpleEuklides:
+                onClickSimpleEuklidesButton(null);
+                return true;
+            case R.id.action_fastModExp:
+                onClickFastModExpButton(null);
+                return true;
+            case R.id.action_extendedEuklides:
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
     public void onClickFastModExpButton(View v){
         Intent intent = new Intent(this,FastModExpActivity.class);
         startActivity(intent);
         Toast.makeText(this, "Wprowadz dane i wciśnij /'Policz/'", Toast.LENGTH_LONG).show();
     }
-    public void onClickSimpleEuklidesButton(View v2){
+    public void onClickSimpleEuklidesButton(View v){
         Intent intent = new Intent(this,SimpleEuklidesActivity.class);
         startActivity(intent);
         Toast.makeText(this, "Wprowadz dane i wciśnij /'Policz/'", Toast.LENGTH_LONG).show();

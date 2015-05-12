@@ -1,10 +1,8 @@
 package ovh.rideau.kryptokalkulator;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TableLayout;
@@ -15,10 +13,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class FastModExpActivity extends ActionBarActivity {
+public class FastModExpActivity extends AppCompatActivity {
 
-
-    List<TableRow> addedRows = new ArrayList<TableRow>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +23,7 @@ public class FastModExpActivity extends ActionBarActivity {
     }
 
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_fast_mod_exp, menu);
@@ -39,13 +35,13 @@ public class FastModExpActivity extends ActionBarActivity {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        //int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
         //if (id == R.id.action_settings) {return true;}
 
         return super.onOptionsItemSelected(item);
-    }
+    }*/
     public void onClickCalculateFastButton(View v){
         int rowNumber = 0;
         TableLayout tl = (TableLayout) findViewById(R.id.resultTable);
@@ -55,7 +51,6 @@ public class FastModExpActivity extends ActionBarActivity {
         int powerBase = getIntFromEditTextId(R.id.aVal);
         int powerExp = getIntFromEditTextId(R.id.powerExponent);
         int powerModul = getIntFromEditTextId(R.id.modul);
-        boolean first = true;
         int x1 = 1;
         int a1 = powerBase;
         for(Integer bit : toBinary(powerExp)){
@@ -65,13 +60,13 @@ public class FastModExpActivity extends ActionBarActivity {
             }
             a1 = (a1*a1)%powerModul;
         }
-        TableRow resultRow = buildRow(rowNumber++, x1, a1, 0);
+        TableRow resultRow = buildRow(rowNumber, x1, a1, 0);
         resultRow.getChildAt(1).setBackgroundResource(R.drawable.result_cell_shape);
         tl.addView(resultRow);
     }
     private TableRow buildRow(int... values){
         TableRow tr = new TableRow(this);
-        tr.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.FILL_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
+        tr.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
         for(int val : values){
             tr.addView(buildCell(val));
         }
@@ -92,7 +87,7 @@ public class FastModExpActivity extends ActionBarActivity {
     }
 
     private List<Integer> toBinary(int number) {
-        List<Integer> bits = new ArrayList<Integer>();
+        List<Integer> bits = new ArrayList<>();
         bits.add(number%2);
         if(number > 1) {
             bits.addAll(toBinary(number / 2));

@@ -1,10 +1,19 @@
 <resources>
     <string name="app_name">KryptoKalkulator</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <!--<string name="action_settings">Settings</string>-->
     <string name="hello">Wybierz algorytm!</string>
     <string name="fastModExpText">Szybkie potęgowanie modularne</string>
-    <string name="simpleEuklText">Prosty algorytm Euklidesa</string>
+    <string name="simpleEuklidesText">Prosty algorytm Euklidesa</string>
     <string name="expandEuklidesText">Rozszerzony algorytm euklidesa</string>
     <string name="title_activity_fast_mod_exp">Szybkie potęgowanie modularne</string>
+    <string name="a">a</string>
+    <string name="b">b</string>
+    <string name="q">q</string>
+    <string name="r">r</string>
+    <string name="gdc">GDC: </string>
+    <string name="i">i</string>
+    <string name="ai">ai</string>
+    <string name="xi">xi</string>
+    <string name="ti">ti</string>
+    <string name="policz">Policz</string>
 </resources>

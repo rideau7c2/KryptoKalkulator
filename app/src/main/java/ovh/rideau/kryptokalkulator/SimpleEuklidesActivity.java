@@ -1,10 +1,8 @@
 package ovh.rideau.kryptokalkulator;
 
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TableLayout;
@@ -12,7 +10,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 
-public class SimpleEuklidesActivity extends ActionBarActivity {
+public class SimpleEuklidesActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +19,7 @@ public class SimpleEuklidesActivity extends ActionBarActivity {
     }
 
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_simple_euklides, menu);
         return true;
@@ -29,12 +27,9 @@ public class SimpleEuklidesActivity extends ActionBarActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-
         return super.onOptionsItemSelected(item);
-    }
+    }*/
     public void onClickCalculateSimpleButton(View v){
-        int rowNumber = 0;
         TableLayout tl = (TableLayout) findViewById(R.id.resultTable);
         tl.removeViews(1, tl.getChildCount()-1);
         int a1 = getIntFromEditTextId(R.id.aVal);
@@ -58,7 +53,7 @@ public class SimpleEuklidesActivity extends ActionBarActivity {
     }
     private TableRow buildRow(int... values){
         TableRow tr = new TableRow(this);
-        tr.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.FILL_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
+        tr.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT, TableRow.LayoutParams.WRAP_CONTENT));
         for(int val : values){
             tr.addView(buildCell(val));
         }
