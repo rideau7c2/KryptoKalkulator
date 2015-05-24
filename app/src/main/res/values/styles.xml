@@ -7,12 +7,28 @@
     <style name="TableCell" >
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_column">2</item>
-        <item name="android:paddingLeft">10dp</item>
-        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
         <item name="android:height">20dp</item>
         <item name="android:gravity">center</item>
         <item name="android:background">@drawable/cell_shape</item>
+    </style>
+
+    <style name="CalculateButton" >
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:text">@string/policz</item>
+    </style>
+
+    <style name="GDCStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:text">@string/gdc</item>
     </style>
 
 </resources>

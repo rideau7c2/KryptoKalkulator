@@ -5,6 +5,6 @@
         android:orderInCategory="1" app:showAsAction="never" />
     <item android:id="@+id/action_extendedEuklides" android:title="@string/fastModExpText"
         android:orderInCategory="2" app:showAsAction="never" />
-    <item android:id="@+id/action_fastModExp" android:title="@string/expandEuklidesText"
+    <item android:id="@+id/action_fastModExp" android:title="@string/extendedEuklidesText"
         android:orderInCategory="3" app:showAsAction="never" />
 </menu>

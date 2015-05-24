@@ -65,13 +65,9 @@
         tools:ignore="HardcodedText" />
 
     <Button
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/policz"
+        style="@style/CalculateButton"
         android:id="@+id/calculateFastButton"
         android:layout_below="@+id/aVal"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
         android:onClick="onClickCalculateFastButton"/>
 
     <TableLayout
