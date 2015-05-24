@@ -1,4 +1,4 @@
-# CryptoCalc
+# CryptoCalc [![Build Status](https://travis-ci.org/rideau7c2/KryptoKalkulator.svg?branch=master)](https://travis-ci.org/rideau7c2/KryptoKalkulator)
 Aplikacja stworzona na potrzeby kursu *Wstęp do Kryptologi* nauczanego na *Wyższej Szkole Informatyki Stosowanej i Zarządzania*.
 Zadaniem aplikacji jest rysowanie tabel używanych podczas stosowania poniższych algorytmów:
 * Algorytm Szybkiego potęgowania modularnego
