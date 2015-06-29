@@ -38,6 +38,7 @@
         android:text="@string/extendedEuklidesText"
         android:id="@+id/expandEuklidesButton"
         android:layout_below="@+id/simpleEuklButton"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="onClickExtendedEuklidesButton"/>
 
 </RelativeLayout>

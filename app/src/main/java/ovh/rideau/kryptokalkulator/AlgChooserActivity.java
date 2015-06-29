@@ -40,6 +40,7 @@ public class AlgChooserActivity extends AppCompatActivity {
                 onClickFastModExpButton(null);
                 return true;
             case R.id.action_extendedEuklides:
+                onClickExtendedEuklidesButton(null);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -52,6 +53,12 @@ public class AlgChooserActivity extends AppCompatActivity {
     }
     public void onClickSimpleEuklidesButton(View v){
         Intent intent = new Intent(this,SimpleEuklidesActivity.class);
+        startActivity(intent);
+        Toast.makeText(this, "Wprowadz dane i wciśnij /'Policz/'", Toast.LENGTH_LONG).show();
+    }
+
+    public void onClickExtendedEuklidesButton(View v){
+        Intent intent = new Intent(this,ExtendedEuklidesActivity.class);
         startActivity(intent);
         Toast.makeText(this, "Wprowadz dane i wciśnij /'Policz/'", Toast.LENGTH_LONG).show();
     }

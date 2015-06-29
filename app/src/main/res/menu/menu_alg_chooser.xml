@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools" tools:context=".AlgChooserActivity">
     <item android:id="@+id/action_simpleEuklides" android:title="@string/simpleEuklidesText"
         android:orderInCategory="1" app:showAsAction="never" />
-    <item android:id="@+id/action_extendedEuklides" android:title="@string/fastModExpText"
+    <item android:id="@+id/action_extendedEuklides" android:title="@string/extendedEuklidesText"
         android:orderInCategory="2" app:showAsAction="never" />
-    <item android:id="@+id/action_fastModExp" android:title="@string/extendedEuklidesText"
+    <item android:id="@+id/action_fastModExp" android:title="@string/fastModExpText"
         android:orderInCategory="3" app:showAsAction="never" />
 </menu>
